@@ -1,3 +1,5 @@
 .env
 venv/
 __pycache__/
+gen-lang-client-0911204569-fd4377be1288.json
+.vscode/

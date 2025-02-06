@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        .product-details {
+            margin-top: 20px;
+        }
+        .product-details p {
+            margin: 5px 0;
+        }
+        .product-details img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Product Details</h1>
+    <div class="product-details">
+        <p><strong>Title:</strong> {{ product.title }}</p>
+        <p><strong>Description:</strong> {{ product.description }}</p>
+        <p><strong>Category:</strong> {{ product.category }}</p>
+        <p><strong>Price:</strong> ${{ product.price }}</p>
+        <p><strong>Rating:</strong> {{ product.rating }}</p>
+        <p><strong>Brand:</strong> {{ product.brand }}</p>
+        <p><strong>Seller ID:</strong> {{ product.seller_id }}</p>
+        <p><strong>Thumbnail:</strong></p>
+        <img src="{{ product.thumbnail }}" alt="Thumbnail">
+        <p><strong>Images:</strong></p>
+        {% for image in product.images %}
+        <img src="{{ image }}" alt="Product Image">
+        {% endfor %}
+        <p><strong>Created At:</strong> {{ product.created_at }}</p>
+        <p><strong>Updated At:</strong> {{ product.updated_at }}</p>
+    </div>
+</body>
+</html>
